@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-statue.jpg";
 import classroomImg from "@/assets/classroom.jpg";
-import principalImg from "@/assets/principal.jpg";
-import { BookOpen, Users, Sparkles, Award, ArrowRight } from "lucide-react";
+import { BookOpen, Users, Sparkles, Award, ArrowRight, Trophy } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,40 +111,46 @@ function HomePage() {
         </div>
       </section>
 
-      {/* PRINCIPAL'S MESSAGE */}
+      {/* RESULTS HIGHLIGHT */}
       <section className="bg-secondary/40 py-24">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="relative">
-            <div className="absolute -left-4 -top-4 h-full w-full rounded-3xl bg-[var(--gradient-saffron)] opacity-30" />
-            <img
-              src={principalImg}
-              alt="Principal of Vivekananda Model High School"
-              className="relative aspect-[4/5] w-full rounded-3xl object-cover shadow-[var(--shadow-warm)]"
-              loading="lazy"
-              width={900}
-              height={1100}
-            />
-          </div>
           <div>
-            <span className="ornament">From the Principal</span>
+            <span className="ornament">Class X Board Results</span>
             <h2 className="mt-3 font-display text-4xl text-primary md:text-5xl">
-              A message from our Principal
+              A legacy of excellence, year after year
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/85">
-              At Vivekananda Model High School, we believe every child carries a spark waiting to
-              shine. Our role is to nurture that spark with patience, knowledge and love — so each
-              student grows into a thoughtful, confident and compassionate human being.
-            </p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              We invite parents and students to visit our campus, meet our teachers, and experience
-              the warmth of our learning community.
+              Our students continue to make us proud in the State Board examinations. Explore
+              this year's achievers and a record of past results that reflect our consistent
+              academic strength.
             </p>
             <Link
-              to="/contact"
+              to="/results"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Book an Appointment <ArrowRight size={16} />
+              View Board Results <ArrowRight size={16} />
             </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            {[
+              { stat: "98%", label: "Pass rate (2025)" },
+              { stat: "27", label: "Distinctions" },
+              { stat: "9", label: "State rankers" },
+              { stat: "15+", label: "Years of results" },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)]"
+              >
+                <div className="flex justify-center text-[var(--saffron-deep)]">
+                  <Trophy size={22} />
+                </div>
+                <div className="mt-3 font-display text-4xl text-primary">{s.stat}</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+                  {s.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
