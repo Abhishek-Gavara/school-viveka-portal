@@ -41,9 +41,9 @@ export function SiteFooter() {
             Reach Us
           </h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-2"><MapPin size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /> Vivekananda Marg, Near City Park</li>
-            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /> +91 98765 43210</li>
-            <li className="flex gap-2"><Mail size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /> info@vmhs.edu.in</li>
+            <li className="flex gap-2"><MapPin size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>Vivekananda Marg, Near City Park</span></li>
+            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>+91 98765 43210</span></li>
+            <li className="flex gap-2"><Mail size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>info@vmhs.edu.in</span></li>
           </ul>
         </div>
       </div>
