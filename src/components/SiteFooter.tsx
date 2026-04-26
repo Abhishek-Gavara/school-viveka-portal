@@ -31,6 +31,8 @@ export function SiteFooter() {
             <li><Link to="/about" className="text-primary-foreground/80 hover:text-[var(--saffron)]">About Us</Link></li>
             <li><Link to="/academics" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Academics</Link></li>
             <li><Link to="/faculty" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Faculty</Link></li>
+            <li><Link to="/results" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Results</Link></li>
+            <li><Link to="/gallery" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Gallery</Link></li>
             <li><Link to="/admissions" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Admissions</Link></li>
             <li><Link to="/contact" className="text-primary-foreground/80 hover:text-[var(--saffron)]">Contact</Link></li>
           </ul>
