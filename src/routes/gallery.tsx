@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Camera, ImageIcon } from "lucide-react";
+import { Camera, ImageIcon, X } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import campusAerialImg from "@/assets/school/campus-aerial.jpg";
 import morningAssemblyImg from "@/assets/school/morning-assembly.jpg";
 import culturalFunctionImg from "@/assets/school/cultural-function.jpg";
