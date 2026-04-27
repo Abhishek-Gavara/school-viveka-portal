@@ -149,4 +149,27 @@
     width: 2.5rem;
     background: linear-gradient(90deg, transparent, var(--saffron-deep), transparent);
   }
+
+  /* Saffron CTA — primary call-to-action across the site */
+  .btn-saffron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-image: var(--gradient-saffron);
+    color: oklch(0.18 0.03 30);
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s var(--transition-smooth), box-shadow 0.2s var(--transition-smooth), filter 0.2s var(--transition-smooth);
+  }
+  .btn-saffron:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+    box-shadow: var(--shadow-warm);
+  }
+  .btn-saffron:disabled {
+    opacity: 0.6;
+    transform: none;
+    filter: none;
+  }
 }
