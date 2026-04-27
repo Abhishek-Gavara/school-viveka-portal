@@ -6,13 +6,13 @@ import { BookOpen, Users, Sparkles, Award, ArrowRight, Trophy } from "lucide-rea
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vivekananda Model High School — Arise, Awake, Achieve" },
+      { title: "Vivekananda High School — Arise, Awake, Achieve" },
       {
         name: "description",
         content:
-          "Welcome to Vivekananda Model High School. Holistic education rooted in values, inspired by Swami Vivekananda. Discover our campus and apply today.",
+          "Welcome to Vivekananda High School. Holistic education rooted in values, inspired by Swami Vivekananda. Discover our campus and apply today.",
       },
-      { property: "og:title", content: "Vivekananda Model High School" },
+      { property: "og:title", content: "Vivekananda High School" },
       { property: "og:description", content: "Holistic education rooted in values, inspired by Swami Vivekananda." },
       { property: "og:image", content: heroImg },
     ],
@@ -35,7 +35,7 @@ function HomePage() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Aerial view of Vivekananda Model High School campus and morning assembly"
+            alt="Aerial view of Vivekananda High School campus and morning assembly"
             className="h-full w-full object-cover"
             width={1600}
             height={1100}

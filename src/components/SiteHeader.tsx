@@ -28,7 +28,7 @@ export function SiteHeader() {
               Vivekananda
             </div>
             <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-              Model High School
+              High School
             </div>
           </div>
         </Link>

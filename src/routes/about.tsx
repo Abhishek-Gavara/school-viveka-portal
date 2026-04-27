@@ -4,9 +4,9 @@ import campusImg from "@/assets/school/campus-aerial.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Vivekananda Model High School" },
-      { name: "description", content: "Our story, vision and the values that guide Vivekananda Model High School." },
-      { property: "og:title", content: "About Vivekananda Model High School" },
+      { title: "About — Vivekananda High School" },
+      { name: "description", content: "Our story, vision and the values that guide Vivekananda High School." },
+      { property: "og:title", content: "About Vivekananda High School" },
       { property: "og:description", content: "Our story, vision and the values that guide our school." },
       { property: "og:image", content: campusImg },
     ],
@@ -22,7 +22,7 @@ function AboutPage() {
       <section className="container-page grid gap-12 py-16 lg:grid-cols-2 lg:items-center">
         <img
           src={campusImg}
-          alt="Vivekananda Model High School campus"
+          alt="Vivekananda High School campus"
           className="aspect-[4/3] w-full rounded-3xl object-cover shadow-[var(--shadow-warm)]"
           loading="lazy"
           width={1200}
@@ -31,7 +31,7 @@ function AboutPage() {
         <div>
           <h2 className="font-display text-3xl text-primary md:text-4xl">A school built on inspiration</h2>
           <p className="mt-5 leading-relaxed text-foreground/85">
-            Vivekananda Model High School was founded with a simple but powerful belief — that
+            Vivekananda High School was founded with a simple but powerful belief — that
             true education shapes character as much as it sharpens the mind. The statue of
             Swami Vivekananda standing proudly at our gates is a daily reminder of the ideals
             that guide us: courage, clarity, compassion, and self-reliance.
@@ -52,7 +52,7 @@ function AboutPage() {
             { title: "Values", text: "Truth, discipline, compassion, and the courage to stand for what is right." },
           ].map((v) => (
             <div key={v.title} className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-              <span className="ornament">VMHS</span>
+              <span className="ornament">VHS</span>
               <h3 className="mt-3 font-display text-2xl text-primary">{v.title}</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">{v.text}</p>
             </div>
