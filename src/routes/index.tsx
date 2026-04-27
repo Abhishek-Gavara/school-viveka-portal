@@ -1,5 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/school/campus-aerial.jpg";
+import { useEffect, useState } from "react";
+import heroImg1 from "@/assets/school/campus-aerial.jpg";
+import heroImg2 from "@/assets/school/mass-pt-drill.jpg";
+import heroImg3 from "@/assets/school/pole-pyramid.jpg";
+import heroImg4 from "@/assets/school/playground-courtyard.jpg";
 import classroomImg from "@/assets/school/morning-assembly.jpg";
 import { BookOpen, Users, Sparkles, Award, ArrowRight, Trophy } from "lucide-react";
 
@@ -14,7 +18,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Vivekananda High School" },
       { property: "og:description", content: "Holistic education rooted in values, inspired by Swami Vivekananda." },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: heroImg1 },
     ],
   }),
   component: HomePage,
@@ -27,19 +31,58 @@ const highlights = [
   { icon: Award, title: "Holistic Growth", text: "Sports, arts, science clubs and community service for well-rounded learners." },
 ];
 
+const heroSlides = [
+  {
+    src: heroImg1,
+    alt: "White school building with students gathered in white uniforms",
+  },
+  {
+    src: heroImg2,
+    alt: "Students performing Mass PT Drill on the school ground",
+  },
+  {
+    src: heroImg3,
+    alt: "Students performing pole mallakhamb formation",
+  },
+  {
+    src: heroImg4,
+    alt: "Main school playground courtyard view",
+  },
+];
+
 function HomePage() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Aerial view of Vivekananda High School campus and morning assembly"
-            className="h-full w-full object-cover"
-            width={1600}
-            height={1100}
-          />
+          {heroSlides.map((slide, index) => (
+            <img
+              key={slide.src}
+              src={slide.src}
+              alt={slide.alt}
+              className={`absolute inset-0 h-full w-full object-cover [image-rendering:auto] transition-opacity duration-[900ms] ease-out ${
+                index === activeSlide
+                  ? "opacity-100"
+                  : "opacity-0"
+              }`}
+              width={1920}
+              height={1280}
+              sizes="100vw"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+            />
+          ))}
           <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
         </div>
 
@@ -68,6 +111,20 @@ function HomePage() {
             >
               Discover Our School
             </Link>
+          </div>
+
+          <div className="mt-8 flex items-center gap-2">
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.src}
+                type="button"
+                aria-label={`Show hero image ${index + 1}`}
+                onClick={() => setActiveSlide(index)}
+                className={`h-2.5 rounded-full transition-all ${
+                  index === activeSlide ? "w-8 bg-saffron" : "w-2.5 bg-primary-foreground/45 hover:bg-primary-foreground/65"
+                }`}
+              />
+            ))}
           </div>
         </div>
 
