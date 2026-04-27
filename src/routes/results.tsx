@@ -4,13 +4,13 @@ import { Trophy, Award, Star, TrendingUp } from "lucide-react";
 export const Route = createFileRoute("/results")({
   head: () => ({
     meta: [
-      { title: "Board Results — Vivekananda Model High School" },
+      { title: "Board Results — Vivekananda High School" },
       {
         name: "description",
         content:
-          "Class X board examination results at Vivekananda Model High School — current year toppers and a record of past years' achievements.",
+          "Class X board examination results at Vivekananda High School — current year toppers and a record of past years' achievements.",
       },
-      { property: "og:title", content: "Board Results — Vivekananda Model High School" },
+      { property: "og:title", content: "Board Results — Vivekananda High School" },
       {
         property: "og:description",
         content: "Celebrating our Class X achievers across the years.",

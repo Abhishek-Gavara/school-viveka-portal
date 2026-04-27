@@ -4,10 +4,10 @@ import { FlaskConical, Calculator, Globe2, Palette, Music, Trophy } from "lucide
 export const Route = createFileRoute("/academics")({
   head: () => ({
     meta: [
-      { title: "Academics — Vivekananda Model High School" },
+      { title: "Academics — Vivekananda High School" },
       { name: "description", content: "Our curriculum, programs and facilities — designed to spark learning and creativity." },
-      { property: "og:title", content: "Academics — Vivekananda Model High School" },
-      { property: "og:description", content: "Curriculum, programs and facilities at VMHS." },
+      { property: "og:title", content: "Academics — Vivekananda High School" },
+      { property: "og:description", content: "Curriculum, programs and facilities at VHS." },
     ],
   }),
   component: AcademicsPage,

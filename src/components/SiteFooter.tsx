@@ -11,7 +11,7 @@ export function SiteFooter() {
               V
             </div>
             <div>
-              <div className="font-display text-lg font-semibold">Vivekananda Model High School</div>
+              <div className="font-display text-lg font-semibold">Vivekananda High School</div>
               <div className="text-xs uppercase tracking-[0.18em] text-primary-foreground/60">
                 Arise · Awake · Achieve
               </div>
@@ -52,7 +52,7 @@ export function SiteFooter() {
 
       <div className="border-t border-primary-foreground/10">
         <div className="container-page flex flex-col items-center justify-between gap-2 py-5 text-xs text-primary-foreground/60 md:flex-row">
-          <p>© {new Date().getFullYear()} Vivekananda Model High School. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Vivekananda High School. All rights reserved.</p>
           <p className="font-display italic">"Take up one idea. Make that one idea your life."</p>
         </div>
       </div>

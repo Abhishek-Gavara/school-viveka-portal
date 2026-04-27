@@ -34,16 +34,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vivekananda Model High School — Arise, Awake, Achieve" },
+      { title: "Vivekananda High School — Arise, Awake, Achieve" },
       {
         name: "description",
         content:
-          "Vivekananda Model High School — a place of holistic learning inspired by Swami Vivekananda. Quality education, dedicated faculty, and admissions open.",
+          "Vivekananda High School — a place of holistic learning inspired by Swami Vivekananda. Quality education, dedicated faculty, and admissions open.",
       },
-      { name: "author", content: "Vivekananda Model High School" },
+      { name: "author", content: "Vivekananda High School" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Vivekananda Model High School — Arise, Awake, Achieve" },
-      { name: "twitter:title", content: "Vivekananda Model High School — Arise, Awake, Achieve" },
+      { property: "og:title", content: "Vivekananda High School — Arise, Awake, Achieve" },
+      { name: "twitter:title", content: "Vivekananda High School — Arise, Awake, Achieve" },
       { name: "description", content: "Vivekananda Connect is a school website for inquiries, appointments, and school information." },
       { property: "og:description", content: "Vivekananda Connect is a school website for inquiries, appointments, and school information." },
       { name: "twitter:description", content: "Vivekananda Connect is a school website for inquiries, appointments, and school information." },

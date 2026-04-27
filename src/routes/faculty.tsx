@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/faculty")({
   head: () => ({
     meta: [
-      { title: "Faculty — Vivekananda Model High School" },
+      { title: "Faculty — Vivekananda High School" },
       { name: "description", content: "Meet the dedicated educators who guide and inspire our students every day." },
-      { property: "og:title", content: "Faculty — Vivekananda Model High School" },
+      { property: "og:title", content: "Faculty — Vivekananda High School" },
       { property: "og:description", content: "Meet our dedicated teachers and educators." },
     ],
   }),

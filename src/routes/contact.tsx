@@ -7,9 +7,9 @@ import { Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Appointments — Vivekananda Model High School" },
-      { name: "description", content: "Get in touch with VMHS or book an appointment with the Principal." },
-      { property: "og:title", content: "Contact — Vivekananda Model High School" },
+      { title: "Contact & Appointments — Vivekananda High School" },
+      { name: "description", content: "Get in touch with VHS or book an appointment with the Principal." },
+      { property: "og:title", content: "Contact — Vivekananda High School" },
       { property: "og:description", content: "Get in touch or book an appointment with the Principal." },
     ],
   }),

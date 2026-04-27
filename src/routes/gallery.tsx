@@ -9,13 +9,13 @@ import studentsCourtyardImg from "@/assets/school/students-courtyard.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Vivekananda Model High School" },
+      { title: "Gallery — Vivekananda High School" },
       {
         name: "description",
         content:
-          "A glimpse of life at Vivekananda Model High School — our campus, morning assembly, students and school events.",
+          "A glimpse of life at Vivekananda High School — our campus, morning assembly, students and school events.",
       },
-      { property: "og:title", content: "Gallery — Vivekananda Model High School" },
+      { property: "og:title", content: "Gallery — Vivekananda High School" },
       {
         property: "og:description",
         content: "Photos of our campus, morning assembly, students and school events.",
@@ -113,7 +113,7 @@ function GalleryPage() {
         <div className="container-page text-center">
           <span className="ornament">School Gallery</span>
           <h1 className="mt-4 font-display text-5xl text-primary md:text-6xl">
-            A glimpse of life at VMHS
+            A glimpse of life at VHS
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             From our spacious courtyard and busy morning assembly to colourful school functions —

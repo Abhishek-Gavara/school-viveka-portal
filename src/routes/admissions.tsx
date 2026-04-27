@@ -7,9 +7,9 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/admissions")({
   head: () => ({
     meta: [
-      { title: "Admissions — Vivekananda Model High School" },
+      { title: "Admissions — Vivekananda High School" },
       { name: "description", content: "Submit an admission inquiry. Our team will guide you through the next steps within 24 hours." },
-      { property: "og:title", content: "Admissions — Vivekananda Model High School" },
+      { property: "og:title", content: "Admissions — Vivekananda High School" },
       { property: "og:description", content: "Submit an admission inquiry today." },
     ],
   }),
@@ -29,7 +29,7 @@ const steps = [
   { title: "Submit Inquiry", text: "Fill the form with student details and your contact information." },
   { title: "School Visit", text: "Our team will invite you for a campus visit and a friendly conversation." },
   { title: "Assessment", text: "A simple, age-appropriate interaction with the student." },
-  { title: "Confirmation", text: "Confirm admission and complete the formalities. Welcome to VMHS!" },
+  { title: "Confirmation", text: "Confirm admission and complete the formalities. Welcome to VHS!" },
 ];
 
 function AdmissionsPage() {
@@ -60,7 +60,7 @@ function AdmissionsPage() {
           <span className="ornament">Admissions Open</span>
           <h1 className="mt-4 font-display text-5xl text-primary md:text-6xl">Begin the journey</h1>
           <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            We'd love to welcome your child into the VMHS family. Share a few details and our
+            We'd love to welcome your child into the VHS family. Share a few details and our
             admissions team will reach out shortly.
           </p>
         </div>
