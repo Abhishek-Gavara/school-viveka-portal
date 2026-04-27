@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container-page grid gap-10 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--gradient-saffron)] font-display text-lg font-bold text-primary">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-saffron font-display text-lg font-bold text-primary">
               V
             </div>
             <div>

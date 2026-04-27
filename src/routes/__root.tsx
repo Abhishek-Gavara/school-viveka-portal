@@ -18,7 +18,7 @@ function NotFoundComponent() {
           </p>
           <a
             href="/"
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            className="mt-6 inline-flex items-center justify-center rounded-full btn-saffron px-6 py-3 text-sm font-medium "
           >
             Return Home
           </a>

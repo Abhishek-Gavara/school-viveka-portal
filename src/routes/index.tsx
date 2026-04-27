@@ -48,7 +48,7 @@ function HomePage() {
             Est. with a Vision
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-[1.05] md:text-7xl">
-            Vivekananda <span className="italic text-[var(--saffron)]">Model</span> High School
+            Vivekananda <span className="italic text-[var(--saffron)]">High</span> School
           </h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 md:text-xl">
             A place where young minds awaken to knowledge, character and purpose — guided by
@@ -57,7 +57,7 @@ function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/admissions"
-              className="group inline-flex items-center gap-2 rounded-full bg-[var(--gradient-saffron)] px-7 py-3.5 text-sm font-semibold text-primary shadow-[var(--shadow-warm)] transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-full bg-saffron px-7 py-3.5 text-sm font-semibold text-primary shadow-[var(--shadow-warm)] transition-transform hover:scale-[1.03]"
             >
               Admission Inquiry
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -101,7 +101,7 @@ function HomePage() {
               key={h.title}
               className="group rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-warm)]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--gradient-saffron)] text-primary">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-saffron text-primary">
                 <h.icon size={22} />
               </div>
               <h3 className="mt-5 font-display text-xl text-primary">{h.title}</h3>
@@ -126,7 +126,7 @@ function HomePage() {
             </p>
             <Link
               to="/results"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="mt-8 inline-flex items-center gap-2 rounded-full btn-saffron px-6 py-3 text-sm font-medium transition-colors"
             >
               View Board Results <ArrowRight size={16} />
             </Link>
@@ -181,7 +181,7 @@ function HomePage() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   to="/admissions"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                  className="inline-flex items-center gap-2 rounded-full btn-saffron px-6 py-3 text-sm font-medium "
                 >
                   Apply Now <ArrowRight size={16} />
                 </Link>

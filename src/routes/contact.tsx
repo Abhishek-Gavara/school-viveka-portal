@@ -75,7 +75,7 @@ function ContactPage() {
               { icon: Clock, title: "Office Hours", text: "Mon – Sat · 8:30 AM – 4:00 PM" },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--gradient-saffron)] text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-saffron text-primary">
                   <item.icon size={20} />
                 </div>
                 <div className="min-w-0">
@@ -135,7 +135,7 @@ function ContactPage() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-primary/90 disabled:opacity-60"
+                    className="w-full rounded-full btn-saffron px-6 py-3.5 text-sm font-semibold transition-all disabled:opacity-60"
                   >
                     {submitting ? "Sending..." : "Request Appointment"}
                   </button>
