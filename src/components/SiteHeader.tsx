@@ -56,7 +56,7 @@ export function SiteHeader() {
 
         <Link
           to="/admissions"
-          className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:bg-primary/90 lg:inline-flex"
+          className="hidden rounded-full btn-saffron px-5 py-2.5 text-sm font-medium transition-all hover:scale-[1.02] lg:inline-flex"
         >
           Apply Now
         </Link>
@@ -88,7 +88,7 @@ export function SiteHeader() {
             <Link
               to="/admissions"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
+              className="mt-3 inline-flex justify-center rounded-full btn-saffron px-5 py-3 text-sm font-medium text-primary-foreground"
             >
               Apply Now
             </Link>

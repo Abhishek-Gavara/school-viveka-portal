@@ -126,7 +126,7 @@ function HomePage() {
             </p>
             <Link
               to="/results"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="mt-8 inline-flex items-center gap-2 rounded-full btn-saffron px-6 py-3 text-sm font-medium transition-colors"
             >
               View Board Results <ArrowRight size={16} />
             </Link>
@@ -181,7 +181,7 @@ function HomePage() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   to="/admissions"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                  className="inline-flex items-center gap-2 rounded-full btn-saffron px-6 py-3 text-sm font-medium "
                 >
                   Apply Now <ArrowRight size={16} />
                 </Link>

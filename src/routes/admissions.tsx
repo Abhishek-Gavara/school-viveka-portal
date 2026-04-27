@@ -139,7 +139,7 @@ function AdmissionsPage() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-primary/90 disabled:opacity-60"
+                    className="w-full rounded-full btn-saffron px-6 py-3.5 text-sm font-semibold transition-all disabled:opacity-60"
                   >
                     {submitting ? "Submitting..." : "Submit Inquiry"}
                   </button>
