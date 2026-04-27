@@ -232,6 +232,10 @@ const sections: { heading: string; intro: string; items: GalleryItem[] }[] = [
 ];
 
 function GalleryPage() {
+  const [lightbox, setLightbox] = useState<{ src: string; title: string; caption: string } | null>(
+    null,
+  );
+
   return (
     <>
       {/* HEADER */}
@@ -263,27 +267,57 @@ function GalleryPage() {
             </div>
 
             <div className="mt-10 grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4">
-              {section.items.map((item, i) => (
-                <figure
-                  key={`${item.title}-${i}`}
-                  className={`group relative overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] ${item.span ?? ""}`}
-                >
-                  {item.src ? (
-                    <img
-                      src={item.src}
-                      alt={item.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <Placeholder title={item.title} />
-                  )}
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent p-4 text-primary-foreground">
-                    <div className="font-display text-base">{item.title}</div>
-                    <div className="text-xs text-primary-foreground/80">{item.caption}</div>
-                  </figcaption>
-                </figure>
-              ))}
+              {section.items.map((item, i) => {
+                const isClickable = Boolean(item.src);
+                return (
+                  <figure
+                    key={`${item.title}-${i}`}
+                    className={`group relative overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] ${item.span ?? ""} ${isClickable ? "cursor-zoom-in" : ""}`}
+                    onClick={
+                      isClickable
+                        ? () =>
+                            setLightbox({
+                              src: item.src!,
+                              title: item.title,
+                              caption: item.caption,
+                            })
+                        : undefined
+                    }
+                    onKeyDown={
+                      isClickable
+                        ? (e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              setLightbox({
+                                src: item.src!,
+                                title: item.title,
+                                caption: item.caption,
+                              });
+                            }
+                          }
+                        : undefined
+                    }
+                    tabIndex={isClickable ? 0 : undefined}
+                    role={isClickable ? "button" : undefined}
+                    aria-label={isClickable ? `View ${item.title}` : undefined}
+                  >
+                    {item.src ? (
+                      <img
+                        src={item.src}
+                        alt={item.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <Placeholder title={item.title} />
+                    )}
+                    <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent p-4 text-primary-foreground">
+                      <div className="font-display text-base">{item.title}</div>
+                      <div className="text-xs text-primary-foreground/80">{item.caption}</div>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -299,6 +333,26 @@ function GalleryPage() {
           </p>
         </div>
       </section>
+
+      <Dialog open={lightbox !== null} onOpenChange={(open) => !open && setLightbox(null)}>
+        <DialogContent className="max-w-[95vw] border-none bg-transparent p-0 shadow-none sm:max-w-5xl">
+          <DialogTitle className="sr-only">{lightbox?.title ?? "Photo"}</DialogTitle>
+          <DialogDescription className="sr-only">{lightbox?.caption ?? ""}</DialogDescription>
+          {lightbox && (
+            <figure className="overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)]">
+              <img
+                src={lightbox.src}
+                alt={lightbox.title}
+                className="max-h-[80vh] w-full object-contain bg-black"
+              />
+              <figcaption className="bg-card p-4 text-center">
+                <div className="font-display text-lg text-primary">{lightbox.title}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{lightbox.caption}</div>
+              </figcaption>
+            </figure>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
