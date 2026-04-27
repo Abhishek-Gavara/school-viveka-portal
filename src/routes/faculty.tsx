@@ -41,7 +41,7 @@ function FacultyPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {faculty.map((f) => (
             <div key={f.name} className="group rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-warm)]">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--gradient-saffron)] font-display text-2xl font-bold text-primary shadow-[var(--shadow-soft)] transition-transform group-hover:scale-105">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-saffron font-display text-2xl font-bold text-primary shadow-[var(--shadow-soft)] transition-transform group-hover:scale-105">
                 {f.initials}
               </div>
               <h3 className="mt-5 font-display text-lg text-primary">{f.name}</h3>

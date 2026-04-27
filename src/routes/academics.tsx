@@ -46,7 +46,7 @@ function AcademicsPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {programs.map((p) => (
             <div key={p.title} className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-warm)]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--gradient-saffron)] text-primary">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-saffron text-primary">
                 <p.icon size={22} />
               </div>
               <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--saffron-deep)]">{p.grades}</p>

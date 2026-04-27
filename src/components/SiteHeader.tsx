@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="container-page flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--gradient-saffron)] text-primary-foreground font-display text-lg font-bold shadow-[var(--shadow-soft)] transition-transform group-hover:scale-105">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-saffron text-primary-foreground font-display text-lg font-bold shadow-[var(--shadow-soft)] transition-transform group-hover:scale-105">
             V
           </div>
           <div className="leading-tight">

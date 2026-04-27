@@ -63,7 +63,7 @@ function ResultsPage() {
       {/* CURRENT YEAR HIGHLIGHT */}
       <section className="container-page py-20">
         <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-warm)]">
-          <div className="bg-[var(--gradient-saffron)] px-8 py-3 text-center text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+          <div className="bg-saffron px-8 py-3 text-center text-sm font-semibold uppercase tracking-[0.25em] text-primary">
             ★ This Year's Results — {currentYear.year} ★
           </div>
 
@@ -110,7 +110,7 @@ function ResultsPage() {
                     {currentYear.toppers.map((t) => (
                       <tr key={t.rank} className="bg-card">
                         <td className="px-5 py-4">
-                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--gradient-saffron)] font-display text-sm font-semibold text-primary">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-saffron font-display text-sm font-semibold text-primary">
                             {t.rank}
                           </span>
                         </td>

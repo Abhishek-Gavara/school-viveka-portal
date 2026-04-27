@@ -73,7 +73,7 @@ function AdmissionsPage() {
             <ol className="mt-8 space-y-6">
               {steps.map((s, i) => (
                 <li key={s.title} className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--gradient-saffron)] font-display font-bold text-primary">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-saffron font-display font-bold text-primary">
                     {i + 1}
                   </div>
                   <div>

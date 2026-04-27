@@ -57,7 +57,7 @@ function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/admissions"
-              className="group inline-flex items-center gap-2 rounded-full bg-[var(--gradient-saffron)] px-7 py-3.5 text-sm font-semibold text-primary shadow-[var(--shadow-warm)] transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-2 rounded-full bg-saffron px-7 py-3.5 text-sm font-semibold text-primary shadow-[var(--shadow-warm)] transition-transform hover:scale-[1.03]"
             >
               Admission Inquiry
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -101,7 +101,7 @@ function HomePage() {
               key={h.title}
               className="group rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-warm)]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--gradient-saffron)] text-primary">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-saffron text-primary">
                 <h.icon size={22} />
               </div>
               <h3 className="mt-5 font-display text-xl text-primary">{h.title}</h3>
