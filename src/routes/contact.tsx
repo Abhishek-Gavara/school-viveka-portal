@@ -78,9 +78,19 @@ function ContactPage() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--gradient-saffron)] text-primary">
                   <item.icon size={20} />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-display text-lg text-primary">{item.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="mt-1 block break-words text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                  )}
                 </div>
               </div>
             ))}
