@@ -63,9 +63,15 @@ function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="space-y-6 lg:col-span-2">
             {[
-              { icon: MapPin, title: "Visit Us", text: "Vivekananda Marg, Near City Park" },
-              { icon: Phone, title: "Call Us", text: "+91 98765 43210" },
-              { icon: Mail, title: "Email Us", text: "info@vmhs.edu.in" },
+              {
+                icon: MapPin,
+                title: "Visit Us",
+                text: "JQ25+G73, Komatipeta, Palakonda, Andhra Pradesh 532440",
+                href: "https://www.google.com/maps/search/?api=1&query=JQ25%2BG73+Komatipeta+Palakonda+Andhra+Pradesh+532440",
+                external: true,
+              },
+              { icon: Phone, title: "Call Us", text: "+91 94405 49139", href: "tel:+919440549139" },
+              { icon: Mail, title: "Email Us", text: "vivekanda.high.school.palakonda@gmail.com", href: "mailto:vivekanda.high.school.palakonda@gmail.com" },
               { icon: Clock, title: "Office Hours", text: "Mon – Sat · 8:30 AM – 4:00 PM" },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
