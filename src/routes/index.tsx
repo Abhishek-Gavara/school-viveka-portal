@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-statue.jpg";
-import classroomImg from "@/assets/classroom.jpg";
+import heroImg from "@/assets/school/campus-aerial.jpg";
+import classroomImg from "@/assets/school/morning-assembly.jpg";
 import { BookOpen, Users, Sparkles, Award, ArrowRight, Trophy } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -35,7 +35,7 @@ function HomePage() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt="Statue of Swami Vivekananda in front of Vivekananda Model High School"
+            alt="Aerial view of Vivekananda Model High School campus and morning assembly"
             className="h-full w-full object-cover"
             width={1600}
             height={1100}
@@ -162,7 +162,7 @@ function HomePage() {
             <div className="relative lg:col-span-2">
               <img
                 src={classroomImg}
-                alt="Students learning in classroom"
+                alt="Students lined up at morning assembly in the school courtyard"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 width={1200}

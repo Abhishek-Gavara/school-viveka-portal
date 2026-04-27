@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Camera, ImageIcon } from "lucide-react";
-import campusImg from "@/assets/campus.jpg";
-import classroomImg from "@/assets/classroom.jpg";
+import campusAerialImg from "@/assets/school/campus-aerial.jpg";
+import morningAssemblyImg from "@/assets/school/morning-assembly.jpg";
+import culturalFunctionImg from "@/assets/school/cultural-function.jpg";
+import assemblyLineupImg from "@/assets/school/assembly-lineup.jpg";
+import studentsCourtyardImg from "@/assets/school/students-courtyard.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -10,14 +13,14 @@ export const Route = createFileRoute("/gallery")({
       {
         name: "description",
         content:
-          "A glimpse of life at Vivekananda Model High School — our campus, classrooms, playground, events and amenities.",
+          "A glimpse of life at Vivekananda Model High School — our campus, morning assembly, students and school events.",
       },
       { property: "og:title", content: "Gallery — Vivekananda Model High School" },
       {
         property: "og:description",
-        content: "Photos of our campus, classrooms, playground, and events.",
+        content: "Photos of our campus, morning assembly, students and school events.",
       },
-      { property: "og:image", content: campusImg },
+      { property: "og:image", content: campusAerialImg },
     ],
   }),
   component: GalleryPage,
@@ -32,29 +35,68 @@ type GalleryItem = {
 
 const sections: { heading: string; intro: string; items: GalleryItem[] }[] = [
   {
-    heading: "Campus & Amenities",
-    intro: "A safe, welcoming space designed to inspire learning every day.",
+    heading: "Our Campus",
+    intro:
+      "A spacious U-shaped building wrapped around a large central courtyard — where every morning begins together.",
     items: [
-      { title: "Main Building", caption: "Our school exterior and the Vivekananda statue.", src: campusImg, span: "md:col-span-2 md:row-span-2" },
-      { title: "Classrooms", caption: "Bright, well-equipped classrooms.", src: classroomImg },
-      { title: "Library", caption: "A reading space for curious minds." },
-      { title: "Computer Lab", caption: "Hands-on digital learning." },
+      {
+        title: "Aerial View of the Campus",
+        caption: "The full school courtyard during morning assembly.",
+        src: campusAerialImg,
+        span: "md:col-span-4 md:row-span-2",
+      },
+      {
+        title: "Main Building",
+        caption: "Three floors of classrooms surrounding the courtyard.",
+        src: studentsCourtyardImg,
+        span: "md:col-span-2",
+      },
+      {
+        title: "Courtyard & Gardens",
+        caption: "Tall trees and open space at the heart of the school.",
+        src: morningAssemblyImg,
+        span: "md:col-span-2",
+      },
+    ],
+  },
+  {
+    heading: "School Life",
+    intro:
+      "Discipline, prayer and togetherness — moments from morning assembly and school functions.",
+    items: [
+      {
+        title: "Morning Assembly",
+        caption: "Students gather class-wise every morning before the day begins.",
+        src: assemblyLineupImg,
+        span: "md:col-span-2",
+      },
+      {
+        title: "School Function",
+        caption: "Students in traditional attire during a school celebration.",
+        src: culturalFunctionImg,
+        span: "md:col-span-2",
+      },
+      {
+        title: "Class Lineup",
+        caption: "Boys' section standing in formation during prayer.",
+        src: studentsCourtyardImg,
+      },
+      {
+        title: "Pledge & Prayer",
+        caption: "A daily ritual of values and discipline.",
+        src: morningAssemblyImg,
+      },
+    ],
+  },
+  {
+    heading: "Coming Soon",
+    intro:
+      "More photos from classrooms, science labs, sports day and annual functions will be added here as we receive them.",
+    items: [
+      { title: "Classrooms", caption: "Bright, well-equipped classrooms." },
       { title: "Science Lab", caption: "Where curiosity becomes discovery." },
-    ],
-  },
-  {
-    heading: "Playground & Sports",
-    intro: "Because growth happens beyond the classroom too.",
-    items: [
-      { title: "Playground", caption: "Open spaces for play and PE.", span: "md:col-span-2" },
+      { title: "Computer Lab", caption: "Hands-on digital learning." },
       { title: "Sports Day", caption: "Annual athletics meet." },
-      { title: "Indoor Games", caption: "Chess, carrom and more." },
-    ],
-  },
-  {
-    heading: "Events & Celebrations",
-    intro: "Festivals, functions and the moments that make a school feel like home.",
-    items: [
       { title: "Annual Day", caption: "Our flagship cultural celebration." },
       { title: "Independence Day", caption: "A morning of pride and patriotism." },
       { title: "Science Exhibition", caption: "Student projects on display." },
@@ -74,8 +116,8 @@ function GalleryPage() {
             A glimpse of life at VMHS
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-            From bright classrooms and busy playgrounds to colourful celebrations — here's a
-            look at the moments that shape our school.
+            From our spacious courtyard and busy morning assembly to colourful school functions —
+            here's a look at the moments that shape our school.
           </p>
         </div>
       </section>
@@ -95,9 +137,9 @@ function GalleryPage() {
             </div>
 
             <div className="mt-10 grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4">
-              {section.items.map((item) => (
+              {section.items.map((item, i) => (
                 <figure
-                  key={item.title}
+                  key={`${item.title}-${i}`}
                   className={`group relative overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] ${item.span ?? ""}`}
                 >
                   {item.src ? (
@@ -126,8 +168,8 @@ function GalleryPage() {
           <Camera size={28} className="mx-auto text-[var(--saffron-deep)]" />
           <h3 className="mt-4 font-display text-2xl text-primary">More photos coming soon</h3>
           <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">
-            Share your school photos with us and we'll feature them here. Until then, the
-            placeholders above will be replaced as new images arrive.
+            Share more school photos with us — events, sports day, classrooms, labs — and we'll
+            feature them here as they arrive.
           </p>
         </div>
       </section>
