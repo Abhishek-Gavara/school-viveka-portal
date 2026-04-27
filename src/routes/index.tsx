@@ -48,7 +48,7 @@ function HomePage() {
             Est. with a Vision
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-5xl font-semibold leading-[1.05] md:text-7xl">
-            Vivekananda <span className="italic text-[var(--saffron)]">Model</span> High School
+            Vivekananda <span className="italic text-[var(--saffron)]">High</span> School
           </h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 md:text-xl">
             A place where young minds awaken to knowledge, character and purpose — guided by
