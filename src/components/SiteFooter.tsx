@@ -43,11 +43,30 @@ export function SiteFooter() {
             Reach Us
           </h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
-            <li className="flex gap-2"><MapPin size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>Vivekananda Marg, Near City Park</span></li>
-            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>+91 98765 43210</span></li>
-            <li className="flex gap-2"><Mail size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" /><span>info@vmhs.edu.in</span></li>
+            <li className="flex gap-2">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=JQ25%2BG73+Komatipeta+Palakonda+Andhra+Pradesh+532440"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--saffron)]"
+              >
+                JQ25+G73, Komatipeta, Palakonda,<br />Andhra Pradesh 532440
+              </a>
+            </li>
+            <li className="flex gap-2">
+              <Phone size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" />
+              <a href="tel:+919440549139" className="hover:text-[var(--saffron)]">+91 94405 49139</a>
+            </li>
+            <li className="flex gap-2">
+              <Mail size={16} className="mt-0.5 shrink-0 text-[var(--saffron)]" />
+              <a href="mailto:vivekanda.high.school.palakonda@gmail.com" className="break-all hover:text-[var(--saffron)]">
+                vivekanda.high.school.palakonda@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
+
       </div>
 
       <div className="border-t border-primary-foreground/10">
