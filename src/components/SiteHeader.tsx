@@ -88,7 +88,7 @@ export function SiteHeader() {
             <Link
               to="/admissions"
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex justify-center rounded-full btn-saffron px-5 py-3 text-sm font-medium text-primary-foreground"
+              className="mt-3 inline-flex justify-center rounded-full btn-saffron px-5 py-3 text-sm font-medium"
             >
               Apply Now
             </Link>
