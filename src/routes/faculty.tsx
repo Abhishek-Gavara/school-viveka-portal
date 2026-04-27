@@ -13,15 +13,30 @@ export const Route = createFileRoute("/faculty")({
 });
 
 const faculty = [
-  { name: "Mrs. Anjali Sharma", role: "Vice Principal · English", initials: "AS" },
-  { name: "Mr. Ramesh Iyer", role: "Mathematics · Grades 9–10", initials: "RI" },
-  { name: "Mrs. Sunita Verma", role: "Science · Middle School", initials: "SV" },
-  { name: "Mr. Praveen Das", role: "Social Studies", initials: "PD" },
-  { name: "Mrs. Kavita Menon", role: "Hindi & Sanskrit", initials: "KM" },
-  { name: "Mr. Arjun Patil", role: "Physical Education", initials: "AP" },
-  { name: "Mrs. Lakshmi Nair", role: "Primary Coordinator", initials: "LN" },
-  { name: "Mr. Rohit Kumar", role: "Computer Science", initials: "RK" },
+  { name: "Gavara Parinaidu", role: "Principal" },
+  { name: "P.D Prasad", role: "Correspondent" },
+  { name: "Balivada Ravikumar", role: "Telugu" },
+  { name: "Kondala Bhaskara Rao", role: "Telugu" },
+  { name: "Kandula Ramakrishna Naidu", role: "Hindi" },
+  { name: "Kondadadi Ramakrishna", role: "English" },
+  { name: "Putta Guru Lakshmipathi", role: "English" },
+  { name: "Subuddhi Sundara Rao", role: "Maths" },
+  { name: "Balaga Sankara Rao", role: "Maths" },
+  { name: "Yenugula Dileep Kumar", role: "Physics" },
+  { name: "Nallabati Chaitanya Kumar", role: "Physics" },
+  { name: "Bankuru Sankara Rao", role: "Biology" },
+  { name: "Kapiri Harikrishna", role: "Social" },
+  { name: "Laveti Govinda Rao", role: "Social" },
 ];
+
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+}
 
 function FacultyPage() {
   return (
@@ -42,7 +57,7 @@ function FacultyPage() {
           {faculty.map((f) => (
             <div key={f.name} className="group rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-warm)]">
               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-saffron font-display text-2xl font-bold text-primary shadow-[var(--shadow-soft)] transition-transform group-hover:scale-105">
-                {f.initials}
+                {getInitials(f.name)}
               </div>
               <h3 className="mt-5 font-display text-lg text-primary">{f.name}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{f.role}</p>
