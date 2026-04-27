@@ -162,7 +162,7 @@ function HomePage() {
             <div className="relative lg:col-span-2">
               <img
                 src={classroomImg}
-                alt="Students learning in classroom"
+                alt="Students lined up at morning assembly in the school courtyard"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 width={1200}
